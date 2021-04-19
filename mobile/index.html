@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>猜数游戏</title>
+	</head>
+	<body>
+		<h1>猜数游戏</h1>
+		<p>系统随机生成了一个1-100之间的随机整数，下面进行猜数游戏。</p>
+		<p id="prompt">请在下方输入框输入您猜测的数字：</p>
+		<input id="guess" />
+		<button id="bu1" type="button" onclick="get()">确定</button>
+		<script type="text/javascript">
+			var num = Math.floor(Math.random() * 100 + 1); //产生1～100之间的随机整数
+			var playTime = 1;//计算猜测次数
+			var guess=document.getElementById('guess');
+
+			function get()
+			{
+					if (guess == num)
+					{
+						document.getElementById("prompt").innerHTML="^_^ ,恭喜你，猜对了，幸运数字是：" + num + "\n您猜测的次数是：" + playTime;
+						break;
+					}
+					else if (guess > num)
+					{
+						playTime = playTime + 1
+						document.getElementById("prompt").innerHTML="你猜的数字大了。";
+					}
+					else if (guess < num)
+					{
+						playTime = playTime + 1
+						document.getElementById("prompt").innerHTML="你猜的数字小了。";
+					}
+					else
+					{
+						go_on = confirm("您输入有误。");
+					}
+			}
+		</script>
+	</body>
+</html>
