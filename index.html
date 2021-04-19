@@ -5,33 +5,40 @@
 		<title>猜数游戏</title>
 	</head>
 	<body>
-
+		<h1>猜数游戏</h1>
+		<p>系统随机生成了一个1-100之间的随机整数，下面进行猜数游戏。</p>
+		<p id="prompt">这里将会显示您猜测的结果。</p>
+		<input type="text" id="guess" placeholder=请输入您猜测的数字 />
+		<button id="bu1" type="button" onclick="twoworks()">确定</button>
 		<script type="text/javascript">
 			var num = Math.floor(Math.random() * 100 + 1); //产生1～100之间的随机整数
-			var playTime = 1//计算猜测次数
-			do {
-				var guess = parseInt(prompt("下面进行猜数游戏\n请输入1-100之间的整数：", ""));
-				if (guess == num)
+			var playTime = 1;//计算猜测次数
+			var t1=document.getElementById("guess")
+			function twoworks()
+			{
+				haha()
+			}
+      function haha()
+      {
+				if (parseFloat(t1.value) == num)
 				{
-					alert("^_^ ,恭喜你，猜对了，幸运数字是：" + num + "\n您猜测的次数是：" + playTime);
-					break;
+				document.getElementById("prompt").innerHTML="^_^ ,恭喜你，猜对了，幸运数字是：" + num + "\n您猜测的次数是：" + playTime;
 				}
-				else if (guess > num)
+				else if (parseFloat(t1.value) > num)
 				{
-					playTime = playTime + 1
-					go_on = confirm("你猜的数字大了，是否继续游戏？");
+				playTime = playTime + 1
+				document.getElementById("prompt").innerHTML="你猜的数字 "+ t1.value + " 大了。请重新输入：";
 				}
-				else if (guess < num)
+				else if (parseFloat(t1.value) < num)
 				{
-					playTime = playTime + 1
-					go_on = confirm("你猜的数字小了，是否继续游戏？");
+				playTime = playTime + 1
+				document.getElementById("prompt").innerHTML="你猜的数字 "+ t1.value + " 小了。请重新输入：";
 				}
-				else
-				{
-					go_on = confirm("您输入有误，是否继续游戏？");
+				else {
+				document.getElementById("prompt").innerHTML="你的输入有误。请重新输入：";
 				}
-			} while (go_on);
-			alert("谢谢参与游戏！");
+			document.getElementById("guess").value=""
+			}
 		</script>
 	</body>
 </html>
