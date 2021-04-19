@@ -5,21 +5,30 @@
 		<title>猜数游戏</title>
 	</head>
 	<body>
+
 		<script type="text/javascript">
 			var num = Math.floor(Math.random() * 100 + 1); //产生1～100之间的随机整数
 			do {
-				var guess = parseInt(prompt("下面进行猜数游戏!\n系统已经随机生成了一个1-100之间的整数。\n请猜数猜猜看是多少：", ""));
-				if (guess == num) {
+				var guess = parseInt(prompt("下面进行猜数游戏\n请输入1-100之间的整数：", ""));
+				if (guess == num)
+				{
+					alert("^_^ ,恭喜你，猜对了，幸运数字是：" + num);
 					break;
-				} else {
-					if (guess > num) {
-						go_on = confirm("你猜的数字大了，是否继续游戏？");
-					} else {
-						go_on = confirm("你猜的数字小了，是否继续游戏？");
-					}
+				}
+				else if (guess > num)
+				{
+					go_on = confirm("你猜的数字大了，是否继续游戏？");
+				}
+				else if (guess < num)
+				{
+					go_on = confirm("你猜的数字小了，是否继续游戏？");
+				}
+				else
+				{
+					go_on = confirm("您输入有误，是否继续游戏？");
 				}
 			} while (go_on);
-			alert("恭喜你，猜对了，系统生成的数字为：" + num + "  谢谢参与游戏！");
+			alert("谢谢参与游戏！");
 		</script>
 	</body>
 </html>
