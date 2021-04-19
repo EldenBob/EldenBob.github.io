@@ -6,13 +6,33 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	</head>
 	<style>
+	body{
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+		background-image: linear-gradient(125deg,#E4FFCD,#6DD5FA,#2980B9,#E4FFCD);
+		background-size: 400%;
+		font-family: "montserrat";
+		animation: bganimation 15s infinite;
+	}
+		@keyframes bganimation{
+		0%{
+		background-position: 0% 50%;
+	}
+		50%{
+		background-position: 100% 50%;
+	}
+		100%{
+		background-position: 0% 50%;
+	}
+	}
 		h1{
 			letter-spacing:10px;
 		}
 		div{
 		text-align: center;
 		width: 300px;
-		height: 400px;
+		height: 330px;
 		background-color: AliceBlue ;
 		margin: 20px auto;
 		border: solid	gray
@@ -35,7 +55,8 @@
 			var t1=document.getElementById("guess")
 			function F5()
 			{
-				location.reload()
+					document.getElementById("prompt").innerHTML=">>>这里将会显示您猜测的结果。<<<" ;
+					num = Math.floor(Math.random() * 100 + 1);
 			}
       function startGame()
       {
