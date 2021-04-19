@@ -5,20 +5,24 @@
 		<title>猜数游戏</title>
 	</head>
 	<body>
+		<div align="center">
 		<h1>猜数游戏</h1>
 		<p>系统随机生成了一个1-100之间的随机整数，下面进行猜数游戏。</p>
-		<p id="prompt">这里将会显示您猜测的结果。</p>
+		<p id="prompt">>>>这里将会显示您猜测的结果。<<<</p>
 		<input type="text" id="guess" placeholder=请输入您猜测的数字 />
-		<button id="bu1" type="button" onclick="twoworks()">确定</button>
+		<button id="bu1" type="button" onclick="startGame()">确定</button>
+		<button id="bu1" type="button" onclick="F5()">重新开始</button>
+
+		</div>
 		<script type="text/javascript">
 			var num = Math.floor(Math.random() * 100 + 1); //产生1～100之间的随机整数
 			var playTime = 1;//计算猜测次数
 			var t1=document.getElementById("guess")
-			function twoworks()
+			function F5()
 			{
-				haha()
+				location.reload()
 			}
-      function haha()
+      function startGame()
       {
 				if (parseFloat(t1.value) == num)
 				{
