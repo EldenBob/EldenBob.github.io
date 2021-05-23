@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="http://www.zhangxinxu.com/study/js/jquery.anchor.1.0.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/libs/animate.css">
     <link rel="stylesheet" href="css/site.css">
@@ -44,8 +45,24 @@ function completeLoading() {
   }
 }
     </script>
+    <script type="text/javascript">
+    $().ready(function(){
+          $(window).scroll(function(){
+              var scrollTop = $(window).scrollTop();//获取当前滑动的位置
+              console.log('当前滑动的位置'+scrollTop);
+              if(scrollTop > 0){
+                  $("nav").addClass("on");
+              }else{
+//                  $("nav").removeClass("on");
+
+              }
+
+          })
+      })
+    </script>
   </head>
-  <body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="zhuye">
     <nav id="daohang1" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-transparent">
     	<div class="container-fluid">
     		<a class="navbar-brand" href="#"><img src="./img/icon_trans.png" width="40" height="40"><span class=" name">次元视觉</span></a>
@@ -54,20 +71,20 @@ function completeLoading() {
     			</button>
     			<div class="collapse navbar-collapse" id="navbarResponsive">
     				<ul class="navbar-nav mr-auto">
-    					<li class="nav-item active">
-    						<a class="nav-link" href="#daohang1">主页</a>
+    					<li class="nav-item">
+    						<a class="nav-link" href="#zhuye">主页</a>
+    					</li>
+    					<li class="nav-item" >
+    						<a class="nav-link smooth" href="#huanying2">我们</a>
     					</li>
     					<li class="nav-item">
-    						<a class="nav-link" href="#huanying">我们</a>
+    						<a class="nav-link smooth" href="#zhenghuo" >整活</a>
     					</li>
     					<li class="nav-item">
-    						<a class="nav-link" href="#">整活</a>
+    						<a class="nav-link" href="#wenzhang">文章</a>
     					</li>
     					<li class="nav-item">
-    						<a class="nav-link" href="#">文章</a>
-    					</li>
-    					<li class="nav-item">
-    						<a class="nav-link" href="#">故事</a>
+    						<a class="nav-link" href="#gushi">故事</a>
     					</li>
     				</ul>
             <form class="form-inline my-2 my-sm-0">
@@ -76,6 +93,7 @@ function completeLoading() {
     			</div>
     	</div>
     </nav>
+    </div>
     <div id="carouselExampleCaptions" class="carousel slide lunbo" data-ride="carousel">
       <ul class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -114,7 +132,8 @@ function completeLoading() {
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div class="container-fluid huanying">
+<div id="huanying2" class="huanying2">
+<div  class="container-fluid huanying">
   <div class="row jumbotron">
     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
@@ -123,6 +142,7 @@ function completeLoading() {
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
       <p class="mid" style="font-family:Microsoft YaHei">我们是一群因兴趣而聚集在一起的一行人。<br></p>
     </div>
+</div>
 </div>
 </div>
 <div class="container ">
@@ -173,7 +193,26 @@ function completeLoading() {
 		</div>
 	</div>
 </div>
-<script src="dist/wow.js"></script>
+
+<button onclick="topFunction()" id="myBtn" title="回顶部">返回顶部</button>
+<script>
+// 当网页向下滑动 20px 出现"返回顶部" 按钮
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {console.log(121);
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// 点击按钮，返回顶部
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 <script>
   wow = new WOW(
     {
@@ -190,6 +229,7 @@ function completeLoading() {
     section.className = 'section--purple wow fadeInDown';
     this.parentNode.insertBefore(section, this);
   };
+
 </script>
 <hr class="my-4">
 <figure>
@@ -199,5 +239,6 @@ function completeLoading() {
 	</div>
 </figure>
     <!-- Optional JavaScript; choose one of the two! -->
+
   </body>
 </html>
