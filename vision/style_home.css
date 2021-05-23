@@ -34,9 +34,7 @@ p.lead{
 nav {
   opacity:1.0;
 }
-div.kkkk{
-  opacity:1.0;
-}
+
 figure {
   position: relative;
   width: 100%;
@@ -51,4 +49,17 @@ figure {
  background-attachment: fixed;
  background-position: center;
  background-size: cover;
+}
+.midbtn {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .card-body {
+    text-align: center;
+}
+
+
+  }
 }
