@@ -45,8 +45,8 @@ figure {
 }
 
 #fixed {
-  background-image: url('E:/CUC/数营/2021春/交互设计/EldenBob.github.io/期中作业/img/heying.jpg');
-  height: 300px;
+  background-image: url('./img/heying.jpg');
+  height: 400px;
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: center;
