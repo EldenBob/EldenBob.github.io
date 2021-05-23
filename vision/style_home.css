@@ -67,14 +67,20 @@ figure {
     right: 20px;
     z-index: 99;
     border: none;
-    outline: none;
-    background-color: red;
-    color: white;
+    outline: inherit;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
+
   }
 
   #myBtn:hover {
-    background-color: #555;
+    background-color: #FFF;
+  }
+  footer{
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+  }
+  .light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
   }
