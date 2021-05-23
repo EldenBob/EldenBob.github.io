@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <META HTTP-EQUIV="pragma" CONTENT="no-cache">
-    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
     <META HTTP-EQUIV="expires" CONTENT="0">
     <title>次元视觉工作室</title>
     <!-- Bootstrap CSS -->
@@ -35,16 +35,16 @@ $('[data-toggle="tooltip"]').tooltip()
 
     </style>
   </head>
-  <body>
+  <body onload="load()">
     <div id="fengmian" class="backg">
-      <div id= "fengmian"class="jumbotron content">
+      <div class="jumbotron content">
         <div id ="text">
            <h1 class="text-white">次元视觉工作室</h1>
            <h3 class="text-white">记录关于生命的一切美好。</h3><br>
            <div class="dorp">
              <p><a class="btn btn-info btn-lg parent" href="home.html" role="button">了解更多</a></p>
             <div class="dorp_con">
-              <p><a class="btn btn-outline-info btn-lg parent" href="javascript:location.reload(ture);" role="button" data-toggle="tooltip" data-placement="right" title="不刷新一下看看吗？">点击刷新</a></p>
+              <p><a id="reloadimg" class="btn btn-outline-info btn-lg parent" onclick="location.reload(ture)" role="button" data-toggle="tooltip" data-placement="right" title="不刷新一下看看吗？">点击刷新</a></p>
             </div>
            </div>
         </div>
@@ -60,9 +60,50 @@ $('[data-toggle="tooltip"]').tooltip()
       var height = window.innerHeight;
       var myDiv = document.getElementById("fengmian");
       myDiv.style.height = height + "px";
-
-
 }
+</script>
+<script type="text/javascript">
+function load(){
+document.getElementById("reloadimg").onclick();
+}
+function reloading() {
+
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = "/style_welcome.css";
+  document.getElementsByTagName("head")[0].appendChild(link);
     </script>
+    <script>
+(function(){
+    var version='';
+    var xmlhttp;
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest){
+      xmlhttp=new XMLHttpRequest();
+    }
+        // code for IE6, IE5
+    else{
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function(){
+      if (xmlhttp.readyState==4 && xmlhttp.status==200){
+          version=xmlhttp.responseText;
+      }
+    }
+    xmlhttp.open("GET","test/get",false);
+    xmlhttp.send();
+
+    var css = document.createElement ("link");
+    css.rel = "stylesheet";
+    css.href = "css/reponsive.css?version="+version;
+    document.getElementsByTagName("head")[0].appendChild(css);
+
+    css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "./css/item-list.css?version="+version;
+    document.getElementsByTagName("head")[0].appendChild(css);
+})();
+</script>
   </body>
 </html>
