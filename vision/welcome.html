@@ -12,11 +12,13 @@
 
     <link rel="icon" href="./img/icon.png">
     <script>
-
+    $(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
     </script>
 
   </head>
-  <body onLoad="javascript:document.yourFormName.reset()">
+  <body>
     <div id="fengmian" class="backg">
       <div class="jumbotron content">
         <div id ="text">
@@ -43,5 +45,6 @@
       myDiv.style.height = height + "px";
 }
 </script>
+  <script src="lib/gMarker.js?random=120211"></script>
   </body>
 </html>
