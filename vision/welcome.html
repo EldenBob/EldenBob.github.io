@@ -50,5 +50,13 @@ $('[data-toggle="tooltip"]').tooltip()
       myDiv.style.height = height + "px";
 }
 </script>
+<script type="text/javascript">
+fuction myfun() {
+if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+window.applicationCache.update();
+}
+}
+window.onload = myfun
+</script>
   </body>
 </html>
