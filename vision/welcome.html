@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
-    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-    <META HTTP-EQUIV="expires" CONTENT="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
     <title>次元视觉工作室</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -15,25 +15,9 @@
 
     <link rel="icon" href="./img/icon.png">
     <script>
-    $(function () {
-$('[data-toggle="tooltip"]').tooltip()
-})
+
     </script>
-    <style media="screen">
 
-    div.backg {
-    text-align: center;
-    background: url(https://source.unsplash.com/random/1280x720) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    width:100%;
-    border: solid	gray
-    width: 200px;
-    padding: 25px;
-    }
-
-    </style>
   </head>
   <body onload="load()">
     <div id="fengmian" class="backg">
@@ -61,49 +45,6 @@ $('[data-toggle="tooltip"]').tooltip()
       var myDiv = document.getElementById("fengmian");
       myDiv.style.height = height + "px";
 }
-</script>
-<script type="text/javascript">
-function load(){
-document.getElementById("reloadimg").onclick();
-}
-function reloading() {
-
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = "/style_welcome.css";
-  document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-    <script>
-(function(){
-    var version='';
-    var xmlhttp;
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-    if (window.XMLHttpRequest){
-      xmlhttp=new XMLHttpRequest();
-    }
-        // code for IE6, IE5
-    else{
-      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function(){
-      if (xmlhttp.readyState==4 && xmlhttp.status==200){
-          version=xmlhttp.responseText;
-      }
-    }
-    xmlhttp.open("GET","test/get",false);
-    xmlhttp.send();
-
-    var css = document.createElement ("link");
-    css.rel = "stylesheet";
-    css.href = "css/reponsive.css?version="+version;
-    document.getElementsByTagName("head")[0].appendChild(css);
-
-    css = document.createElement("link");
-    css.rel = "stylesheet";
-    css.href = "./css/item-list.css?version="+version;
-    document.getElementsByTagName("head")[0].appendChild(css);
-})();
 </script>
   </body>
 </html>
