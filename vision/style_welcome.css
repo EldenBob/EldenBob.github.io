@@ -1,0 +1,74 @@
+
+div.backg {
+text-align: center;
+background: url(https://source.unsplash.com/random/1280x720) no-repeat center center;
+background-size: cover;
+background-attachment: fixed;
+height: 100%;
+width:100%;
+border: solid	gray
+width: 200px;
+padding: 25px;
+}
+
+div.content {
+text-align: left;
+
+background-color: rgba(0, 0, 0, 0.3);
+background-size: cover;
+height: 100%;
+width:100%;
+border: solid	gray
+width: 200px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+padding-bottom:15px;
+border-radius:10px;
+position:relative;
+}
+div #text {
+position: absolute;
+bottom: 10%;
+left: 10%;
+}
+@media screen and (max-width:600px){
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+}
+.shuaxin {
+  float: right;
+}
+  .dorp{
+
+  position: relative;
+  display: inline-block;
+
+}
+.dorp_con{
+
+  display: none;
+
+  position: absolute;
+
+}
+.dorp:hover .dorp_con{display:block;}
+
+@keyframes fade-in {
+    0% {opacity: 0;}/*初始状态 透明度为0*/
+    40% {opacity: 0;}/*过渡状态 透明度为0*/
+    100% {opacity: 1;}/*结束状态 透明度为1*/
+}
+@-webkit-keyframes fade-in {/*针对webkit内核*/
+    0% {opacity: 0;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.dorp_con {
+    animation: fade-in;/*动画名称*/
+    animation-duration: 0.3s;/*动画持续时间*/
+    -webkit-animation:fade-in 0.3s;/*针对webkit内核*/
+}
