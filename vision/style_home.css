@@ -64,16 +64,26 @@ figure {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 25px;
     z-index: 99;
     border: none;
     outline: inherit;
     cursor: pointer;
-
+    background-color: rgba(255, 0, 0, 0);
+    width: 43px;
+    height: 50px;
   }
-
+#topimg {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: -8px;
+  opacity: 0.7;
+  width:35px ;
+  height:40px;
+}
   #myBtn:hover {
-    background-color: #FFF;
+    background-color: rgba(255,200,200,0.5);
   }
   footer{
     background-color: #3f3f3f;
@@ -83,4 +93,7 @@ figure {
   .light{
     border-top: 1px solid #d5d5d5;
     width: 75%;
+  }
+  .ui.modal{
+      top: %;
   }

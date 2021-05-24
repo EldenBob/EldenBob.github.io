@@ -60,6 +60,40 @@ function completeLoading() {
           })
       })
     </script>
+    <script type="text/javascript">
+    $(function () {
+      $('#lhtbtn').popover(
+        {
+              html:true,//content中插入html代码
+              content:"<img src='./img/wxQR.jpg' alt='123' width=230px>"
+        }
+      );
+    });
+    $(function () {
+      $('#thlbtn').popover(
+        {
+              html:true,//content中插入html代码
+              content:"<img src='./img/wxQR.jpg' alt='123' width=230px>"
+        }
+      );
+    });
+    $(function () {
+      $('#rhjbtn').popover(
+        {
+              html:true,//content中插入html代码
+              content:"<img src='./img/wxQR.jpg' alt='123' width=230px>"
+        }
+      );
+    });
+    $(function () {
+      $('#blgbtn').popover(
+        {
+              html:true,//content中插入html代码
+              content:"<img src='./img/wxQR.jpg' alt='123' width=230px>"
+        }
+      );
+    });
+    </script>
   </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="zhuye">
@@ -140,7 +174,8 @@ function completeLoading() {
       <p class="lead">欢迎你，<br>我的朋友。</p>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
-      <p class="mid" style="font-family:Microsoft YaHei">我们是一群因兴趣而聚集在一起的一行人。<br></p>
+      <p class="mid" style="font-family:Microsoft YaHei">我们是一群因兴趣而聚集在一起的一行人。<br>后面说些啥我还没想好，但是这里空着不太好看。<br>所以就用这样的方式凑凑数。
+        <br>总之，不如先占用你几分钟时间看看我们，<br>再决定要不要<button class="btn btn-outline-dark btn-sm" type="submit">深入一步</button>。</p>
     </div>
 </div>
 </div>
@@ -152,7 +187,7 @@ function completeLoading() {
 				<div class="card-body">
 					<h4 class="card-title">ZooMa</h4>
 					<p class="card-text">虽然他喜欢被拍，但是更多时候他在一边举着摄影灯一边说：“我还能站十个小时！”</p>
-					<a href="#" class="btn btn-outline-dark center" style="display:inline-block; vertical-align:middle">拍一拍他</a>
+          <button id="thlbtn" type="button" class="btn btn-outline-secondary" data-trigger="focus" data-toggle="popover" title="感谢叨扰。"  data-placement="top">拍一拍他</button>
 				</div>
         				<img class="card-img-top" src="./img/thl.png">
 			</div>
@@ -164,9 +199,9 @@ function completeLoading() {
 				<div class="card-body">
 					<h4 class="card-title">Hannl</h4>
 					<p class="card-text">自称人文摄影大师，但其实他更擅长在各种极端条件下飞航拍无人机。兼职团队司机。</p>
-					<a href="#" class="btn btn-outline-secondary">拍一拍他</a>
-      	</div>
-			</div>
+          <button id="lhtbtn" type="button" class="btn btn-outline-secondary" data-trigger="focus" data-toggle="popover" title="感谢叨扰。"  data-placement="top">拍一拍他</button>
+        </div>
+        </div>
       <br>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow fadeInDown">
@@ -175,7 +210,7 @@ function completeLoading() {
 				<div class="card-body">
 					<h4 class="card-title">VsR</h4>
 					<p class="card-text">赛博朋克美学极端脑残粉，一会应该可以看到他的大作。人穷但就是喜欢玩跑车。</p>
-					<a href="#" class="btn btn-outline-secondary">拍一拍他</a>
+          <button id="rhjbtn" type="button" class="btn btn-outline-secondary" data-trigger="focus" data-toggle="popover" title="感谢叨扰。"  data-placement="top">拍一拍他</button>
 				</div>
   				<img class="card-img-top" src="./img/rhj.png">
 			</div>
@@ -187,13 +222,13 @@ function completeLoading() {
 				<div class="card-body">
 					<h4 class="card-title">Elden</h4>
 					<p class="card-text">大家都说他是老策划狗了，但他并不这么认为。尽管他始终相信，前期比后期重要的多。</p>
-					<a href="#" class="btn btn-outline-secondary">拍一拍他</a>
+          <button id="blgbtn" type="button" class="btn btn-outline-secondary" data-trigger="focus" data-toggle="popover" title="感谢叨扰。"  data-placement="top">拍一拍他</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<button id="myBtn" type="button" class="btn btn-light" onclick="topFunction()">返回<br>顶部</button>
+<button id="myBtn" type="button" class="btn btn-light" onclick="topFunction()"><img id = "topimg" src="./img/topicon.png" alt="top" ></button>
 <script>
 // 当网页向下滑动 20px 出现"返回顶部" 按钮
 window.onscroll = function() {scrollFunction()};
