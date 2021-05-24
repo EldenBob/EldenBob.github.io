@@ -94,6 +94,25 @@ function completeLoading() {
       );
     });
     </script>
+      <script src="dist/wow.js"></script>
+    <script>
+      wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset:       100,
+          callback:     function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+          }
+        }
+      );
+      wow.init();
+      document.getElementById('moar').onclick = function() {
+        var section = document.createElement('section');
+        section.className = 'section--purple wow fadeInDown';
+        this.parentNode.insertBefore(section, this);
+      };
+
+    </script>
   </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="zhuye">
@@ -175,13 +194,13 @@ function completeLoading() {
   </div>
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
       <p class="mid" style="font-family:Microsoft YaHei">我们是一群因兴趣而聚集在一起的一行人。<br>后面说些啥我还没想好，但是这里空着不太好看。<br>所以就用这样的方式凑凑数。
-        <br>总之，不如先占用你几分钟时间看看我们，<br>再决定要不要<button class="btn btn-outline-dark btn-sm" type="submit">深入一步</button>。</p>
+        <br>总之，不如先占用你几分钟时间看看我们，<br>再决定要不要<a href="#"><span id="huanying3" class="font-weight-bold text-dark">深入一步</span></a>。</p>
     </div>
 </div>
 </div>
 </div>
-<div class="container ">
-	<div class="row ">
+<div class="container">
+	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow fadeInDown">
 			<div class="card">
 				<div class="card-body">
@@ -247,24 +266,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 </script>
-<script>
-  wow = new WOW(
-    {
-      animateClass: 'animated',
-      offset:       100,
-      callback:     function(box) {
-        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-      }
-    }
-  );
-  wow.init();
-  document.getElementById('moar').onclick = function() {
-    var section = document.createElement('section');
-    section.className = 'section--purple wow fadeInDown';
-    this.parentNode.insertBefore(section, this);
-  };
 
-</script>
 <hr class="my-4">
 <figure>
 	<div class="fixed-wrap">
@@ -274,7 +276,7 @@ function topFunction() {
 </figure>
     <!-- Optional JavaScript; choose one of the two! -->
     <footer>
-    	<div class="container-fluid">
+    	<div class="container-fluid wow fadeInDown">
     		<div id="footerbg" class="row text-center">
     			<div class="col-md-4">
     				<img src="./img/icon_trans.png" height="55px" width="55px">
