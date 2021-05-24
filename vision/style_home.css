@@ -7,7 +7,10 @@ a.nav-link {
   position: relative;
   bottom: -66px;
 }
-
+.muticard {
+  position: relative;
+  bottom: 66px;
+}
 span.name {
   font-size: 1em;
   font-family: 'FZYaoti';
@@ -29,6 +32,10 @@ p.lead{
 .huanying {
   position: relative;
   bottom: -66px;
+  font-family: 'FZYaoti';
+}
+.zhenghuo {
+  position: relative;
   font-family: 'FZYaoti';
 }
 nav {
